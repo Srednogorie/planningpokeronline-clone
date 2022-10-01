@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+.idea/
+planningpokeronline-clone-firebase-adminsdk.json
+.env
 
 # testing
 /coverage
