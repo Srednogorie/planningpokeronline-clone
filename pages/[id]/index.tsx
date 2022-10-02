@@ -111,7 +111,7 @@ const Game: NextPage<GamePageProps> = ({serverGame, playerName}) => {
         return () => unsubscribe()
     }, [serverGame.id])
 
-    const bodyHeight = gameOver ? 'h-[calc(100vh-10.0rem)]' : 'h-[calc(100vh-3.0rem)]'
+    const bodyHeight = gameOver ? 'h-[calc(100vh-8.0rem)]' : 'h-[100vh]'
     return (
         <div className={bodyHeight}>
             <Header gameName={serverGame.name}/>

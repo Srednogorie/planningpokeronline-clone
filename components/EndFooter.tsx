@@ -28,7 +28,7 @@ const EndFooter: React.FC<EndFooterProps> = ({localGame}) => {
                 </div>
             </div>
             <section className="w-full overflow-x-scroll mx-auto rounded-md hide-scrollbar">
-                <div className="w-fit mx-auto rounded-md h-28 flex justify-center items-center gap-6 overflow-x-scroll px-3 game-cards-section">
+                <div className="w-fit mx-auto rounded-md h-28 flex justify-center items-center gap-6 px-3 game-cards-section">
                     {
                         Object.entries(resultMap).map(([k, v]) => {
                             return (
