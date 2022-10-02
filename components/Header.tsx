@@ -2,13 +2,15 @@ import Link from "next/link"
 import React from "react"
 
 interface HeaderProps {
-    gameName?: string
+    gameName?: string, pathName?: string
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
     return (
         <header className="h-18 px-5 lg:px-10">
-            <div className="h-full row flex items-center justify-between my-3">
+            <div className={`h-full row flex items-center my-3 
+            ${(props.pathName === '/' || props.pathName === '/about') && 'justify-between'}`}
+            >
                 <div>
                     <Link href="/">
                         <a>
@@ -26,14 +28,16 @@ const Header: React.FC<HeaderProps> = (props) => {
                         <h2 className="font-bold text-center text-xl">{props.gameName}</h2>
                     </div>
                 )}
-                <Link href="/about">
-                    <a className={"cursor-pointer has-tooltip ml-5"}>
-                        <span className='tooltip rounded shadow-lg p-1 bg-[#264653] text-white mt-8 opacity-70 text-xs'>About</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="#3993FE" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </a>
-                </Link>
+                {(props.pathName === '/' || props.pathName === '/about') &&
+                    <Link href="/about">
+                        <a className={"cursor-pointer has-tooltip ml-5"}>
+                            <span className='tooltip rounded shadow-lg p-1 bg-[#264653] text-white mt-8 opacity-70 text-xs'>About</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="#3993FE" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+                    </Link>
+                }
             </div>
         </header>
     )

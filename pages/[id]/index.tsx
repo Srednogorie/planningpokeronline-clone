@@ -135,7 +135,7 @@ const Game: NextPage<GamePageProps> = ({serverGame, playerName}) => {
                             </div>
                             <div/>
 
-                            <div id="playerOne" className="flex justify-end items-center mr-6">
+                            <div className="flex justify-end items-center mr-6">
                                 {numPlayers >= 1 && <Card gameOver={gameOver} choiceState={choiceState} localGame={localGame} playerNum={0}/>}
                             </div>
 

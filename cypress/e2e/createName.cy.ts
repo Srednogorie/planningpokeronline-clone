@@ -45,7 +45,7 @@ context("Name Page", () => {
       cy.url().should('equal', `http://localhost:3000/`)
     })
   })
-  it.only("should return the player in the game if cookie and the player isn't already there", () => {
+  it("should return the player in the game if cookie and the player isn't already there", () => {
     // This will cover a case where the user, for example, accidentally closes their window. This would result
     // in their removal from the game. However, they still have the valid cookie, so they should be brought back.
     // Of course if meanwhile the game get full the user will be refused place despite having valid cookie. This will
@@ -83,7 +83,7 @@ context("Name Page", () => {
       // Assert the user is redirected to the game
       cy.wait(2000)
       cy.url().should('include', `/${gameId}`)
-      cy.wait(3000)
+      cy.wait(2000)
       // Assert the user card is showing on the screen
       cy.get('[id="playerOne"]').should("have.text", "MyUserName")
       // Delete game

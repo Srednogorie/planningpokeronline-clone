@@ -6,7 +6,7 @@ interface CardProps {
 }
 const Card: React.FC<CardProps> = (props) => {
     return (
-        <div>
+        <div id={`${props.playerNum}`}>
             <div className={
                 `flex items-center justify-center text-white mx-auto rounded-md bg-slate-200 w-10 h-16 
                 ${(props.choiceState[props.playerNum] && !props.gameOver) && 'bg-blue-500 card-background'} 

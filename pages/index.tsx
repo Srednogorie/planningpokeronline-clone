@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
     return (
         <div className="h-screen">
-            <Header/>
+            <Header pathName={router.pathname}/>
             <main className="h-5/6">
                 <section className="h-full">
                     <div className="h-full flex justify-center items-center">

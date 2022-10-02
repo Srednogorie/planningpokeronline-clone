@@ -5,13 +5,13 @@ import Header from "../components/Header"
 const About: NextPage = () => {
     return (
         <div>
-            <Header/>
+            <Header pathName='/about'/>
             <div className={"max-w-[750px] mx-auto"}>
                 <div className={"text-center mt-12 mx-6"}>
                     This is very close copy of <a href="https://planningpokeronline.com/" target="_blank" rel="noreferrer" className={"underline"}>planningpokeronline.com</a> built
                     as part of Cloud Firestore listeners exercise.
                     While the game works as expected, for any other purposes please use the original.
-                    It has way more features, remarkable UX and it&apos;s free.
+                    It has way more features, remarkable UX and it&apos;s initially free.
                 </div>
                 <div className="flex flex-col items-center mb-auto mx-4 mt-6">
                     <div className="italic text-[#F4A261] text-center my-6">
