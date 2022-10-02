@@ -17,7 +17,7 @@ const About: NextPage = () => {
                     <div className="italic text-[#F4A261] text-center my-6">
                         <div className={"flex items-center"}>
                             <Image src="/octocat.jpg" alt="Picture of the author" width={30} height={30}/>
-                            <a href="https://github.com/Srednogorie/weekly-search" target="_blank" rel="noreferrer" className={"underline text-gray-600 ml-2"}>
+                            <a href="https://github.com/Srednogorie/planningpokeronline-clone" target="_blank" rel="noreferrer" className={"underline text-gray-600 ml-2"}>
                                 github.com/Srednogorie/planningpokeronline-clone
                             </a>
                         </div>
