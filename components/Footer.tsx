@@ -41,7 +41,7 @@ const Footer: React.FC<CenterProps> = ({localGame, playerName}) => {
     }, [localGame.turns, playerName])
     return (
         <footer>
-            <section className="w-full overflow-x-scroll mx-auto rounded-md hide-scrollbar">
+            <section className="w-full overflow-auto mx-auto rounded-md hide-scrollbar">
                 <div className="w-fit mx-auto rounded-md h-28 flex justify-center items-center gap-6 px-3 game-cards-section">
                     {sequence.map((member) =>
                         <div key={member} onClick={() => handleChoiceChange(member)} className={
