@@ -8,7 +8,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = (props) => {
     return (
         <header className="h-18 px-5 lg:px-10">
-            <div className={`h-full row flex items-center my-3 
+            <div className={`h-full max-w-[1200px] mx-auto row flex items-center my-3 
             ${(props.pathName === '/' || props.pathName === '/about') && 'justify-between'}`}
             >
                 <div>

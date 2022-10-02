@@ -168,7 +168,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
     let serverGame = await getDocument('games', id as string)
     if (serverGame) {
-        if ((serverGame.created.seconds + 600) < Timestamp.now().seconds) {
+        if ((serverGame.created.seconds + 1800) < Timestamp.now().seconds) {
             await deleteDocument('games', id as string)
             serverGame = undefined
         }

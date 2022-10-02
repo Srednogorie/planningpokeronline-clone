@@ -42,7 +42,7 @@ const Footer: React.FC<CenterProps> = ({localGame, playerName}) => {
     return (
         <footer>
             <section className="w-full overflow-x-scroll mx-auto rounded-md hide-scrollbar">
-                <div className="w-fit mx-auto rounded-md h-28 flex justify-center items-center gap-6 overflow-x-scroll px-3 game-cards-section">
+                <div className="w-fit mx-auto rounded-md h-28 flex justify-center items-center gap-6 px-3 game-cards-section">
                     {sequence.map((member) =>
                         <div key={member} onClick={() => handleChoiceChange(member)} className={
                             `h-20 w-12 rounded-md border-2 border-blue-500 flex justify-center items-center text-xl text-blue-500 text-bold cursor-grab 

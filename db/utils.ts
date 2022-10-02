@@ -74,7 +74,7 @@ const isLoggedIn = async () => {
 
 const getNameCookieString = (playerName: string, gameId: string) => {
     const path = '/'
-    return `${gameId}__Na=${playerName}; path=${path}; max-age=600;`
+    return `${gameId}__Na=${playerName}; path=${path}; max-age=1800;`
 }
 
 export {
