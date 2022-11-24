@@ -75,7 +75,7 @@ const Game: NextPage<GamePageProps> = ({serverGame, playerName}) => {
     }
 
     const handleInvitePlayer = async () => {
-        await copy(`http://localhost:3000/${serverGame.id}`)
+        await copy(`https://planningpokeronline-clone.vercel.app/${serverGame.id}`)
         toast.success(
             'Invitation link copied',
             {position: "top-right", duration: 3000, icon: "📨", className: "toast-style"}
